@@ -62,7 +62,7 @@ def publish_Fake_Sensor_Values_to_MQTT():
 		Humidity_Fake_Value = float("{0:.2f}".format(random.uniform(50, 100)))
 
 		Humidity_Data = {}
-		Humidity_Data['Sensor_ID'] = "Dummy-1"
+		Humidity_Data['Sensor_Type'] = "DTH11"
 		Humidity_Data['Date'] = (datetime.today()).strftime("%d-%b-%Y %H:%M:%S:%f")
 		Humidity_Data['Humidity'] = Humidity_Fake_Value
 		humidity_json_data = json.dumps(Humidity_Data)
@@ -75,7 +75,7 @@ def publish_Fake_Sensor_Values_to_MQTT():
 		Temperature_Fake_Value = float("{0:.2f}".format(random.uniform(1, 30)))
 
 		Temperature_Data = {}
-		Temperature_Data['Sensor_ID'] = "Dummy-2"
+		Temperature_Data['Sensor_Type'] = "DTH12"
 		Temperature_Data['Date'] = (datetime.today()).strftime("%d-%b-%Y %H:%M:%S:%f")
 		Temperature_Data['Temperature'] = Temperature_Fake_Value
 		temperature_json_data = json.dumps(Temperature_Data)
